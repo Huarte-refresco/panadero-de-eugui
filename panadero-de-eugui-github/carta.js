@@ -104,6 +104,16 @@ const PRODUCTOS = [
   {id:'bo1',cat:'regalo',n:'Bono desayuno individual',d:'Un desayuno completo para canjear en cualquier local.',p:8.00,img:'desayuno-jamon'},
   {id:'bo2',cat:'regalo',n:'Bono desayuno para dos',d:'Para compartir sin prisas.',p:15.00,img:'tostadas'}
 ];
+/* Pan para hostelería: solo lo ven los clientes registrados (ver clientes.js). Precios ORIENTATIVOS. */
+CATEGORIAS.splice(0, 0, {id:'hosteleria', nombre:'Pan para hostelería', desc:'Pedidos de pan para restaurantes y bares, con reparto a domicilio. Solo clientes registrados.', soloClientes:true});
+PRODUCTOS.push(
+  {id:'h1',cat:'hosteleria',n:'Barra de masa madre',d:'La barra de siempre, 250 g. En cajas para hostelería.',img:'barras',o:[{n:'Caja 25 uds.',p:30.00},{n:'Caja 50 uds.',p:58.00}]},
+  {id:'h2',cat:'hosteleria',n:'Baguette',d:'Fina y crujiente, ideal para bocadillos.',img:'hero-pan',o:[{n:'Caja 20 uds.',p:24.00},{n:'Caja 40 uds.',p:46.00}]},
+  {id:'h3',cat:'hosteleria',n:'Panecillos de mesa',d:'Para acompañar el menú. 40 g la pieza.',img:'w-semillas',o:[{n:'Bolsa 50 uds.',p:17.50},{n:'Bolsa 100 uds.',p:33.00}]},
+  {id:'h4',cat:'hosteleria',n:'Torta rústica para tostas',d:'Hogaza de fermentación lenta, 1 kg. Se puede pedir cortada.',img:'w-hogaza',o:[{n:'Entera',p:6.50},{n:'Cortada',p:6.80}]},
+  {id:'h5',cat:'hosteleria',n:'Pan integral de molde',d:'Para sándwiches y desayunos.',img:'w-integral',o:[{n:'1 ud.',p:4.20},{n:'Caja 6 uds.',p:24.00}]}
+);
+
 const NOTAS_LLEVAR = 'Raciones de 250 g aproximadamente. El producto envasado tiene un incremento de 1 € sobre el precio de tarifa. Precios sujetos a posibles variaciones.';
 
 
