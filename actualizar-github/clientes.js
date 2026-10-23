@@ -61,6 +61,7 @@ function cerrarSesion(){
 (function montarAcceso(){
   const css = document.createElement('style');
   css.textContent = `
+  [hidden]{display:none!important}
   nav.menu a{white-space:nowrap}
   @media (max-width:1300px) and (min-width:981px){nav.menu{gap:14px} nav.menu a{letter-spacing:.06em;font-size:13px} .cuenta-btn{padding:9px 12px}}
   .cuenta-btn{background:var(--oro);color:#fff;border:2px solid var(--oro);border-radius:999px;padding:9px 16px;font:500 14px Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:flex;gap:8px;align-items:center;margin-left:auto;white-space:nowrap}
@@ -128,7 +129,7 @@ function cerrarSesion(){
       btn.onclick = () => menu.classList.toggle('on');
       const enPedidos = /pedidos\.html/.test(location.pathname);
       menu.innerHTML = `<b>${esc(CLIENTE.nombre)}</b><small>${esc(CLIENTE.direccion)}</small><small>${esc(CLIENTE.cp)} ${esc(CLIENTE.localidad)}</small><small>${esc(CLIENTE.condiciones||'')}</small>
-        <div class="acc"><a href="${enPedidos?'#hosteleria':'pedidos.html#hosteleria'}" onclick="document.getElementById('menuCuenta').classList.remove('on')">Pedir pan a domicilio</a><button type="button" onclick="cerrarSesion();document.getElementById('menuCuenta').classList.remove('on')">Cerrar sesión</button></div>`;
+        <div class="acc"><a href="${enPedidos?'#hosteleria':'pedidos.html?v=20261023a#hosteleria'}" onclick="document.getElementById('menuCuenta').classList.remove('on')">Pedir pan a domicilio</a><button type="button" onclick="cerrarSesion();document.getElementById('menuCuenta').classList.remove('on')">Cerrar sesión</button></div>`;
     } else {
       btn.classList.remove('dentro');
       btn.innerHTML = `<span aria-hidden="true">🔑</span><span class="t">Acceso clientes</span>`;

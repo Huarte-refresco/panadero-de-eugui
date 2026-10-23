@@ -266,13 +266,13 @@ a.tab{text-decoration:none;display:inline-flex;align-items:center}
 <a class="skip" href="#catalogo">Saltar a la carta</a>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="Panadero de Eugui, inicio"><img data-img="logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Panadero de Eugui 1927"></a>
+    <a class="logo" href="index.html?v=20261023a" aria-label="Panadero de Eugui, inicio"><img data-img="logo" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Panadero de Eugui 1927"></a>
     <nav class="menu" id="menu" aria-label="Principal">
-      <a href="index.html">Inicio</a>
+      <a href="index.html?v=20261023a">Inicio</a>
       <a href="#llevar">Comida para llevar</a>
       <a href="#desayunos">Desayunos</a>
       <a href="#reposteria">Tartas</a>
-      <a href="index.html#contacto-locales">Locales</a>
+      <a href="index.html?v=20261023a#contacto-locales">Locales</a>
     </nav>
     <button class="carrito-btn" onclick="abrirCarrito()" aria-label="Ver cesta"><span aria-hidden="true">🧺</span><span class="t">Cesta</span><span class="n" id="nCesta">0</span></button>
     <button class="hamb" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu" onclick="toggleMenu(this)">☰</button>
@@ -311,7 +311,7 @@ a.tab{text-decoration:none;display:inline-flex;align-items:center}
     </div>
     <div>
       <h3>Pedidos</h3>
-      <p>Recogida en tienda.<br>A domicilio: solo clientes registrados en la app.<br><a href="index.html">Volver al inicio</a></p>
+      <p>Recogida en tienda.<br>A domicilio: solo clientes registrados en la app.<br><a href="index.html?v=20261023a">Volver al inicio</a></p>
     </div>
     <details class="creditos" style="grid-column:1/-1;font-size:12.5px;color:#9d8f7c"><summary style="cursor:pointer">Créditos de fotos</summary><p id="creditos" style="margin:8px 0 0"></p></details>
     <div class="legal"><span>© 2026 El Panadero de Eugui · Todos los derechos reservados</span><span>Aviso legal · Privacidad · Cookies · Condiciones de venta</span></div>
@@ -385,9 +385,9 @@ a.tab{text-decoration:none;display:inline-flex;align-items:center}
   </div>
 </div>
 
-<script src="imagenes.js"></script>
-<script src="carta.js"></script>
-<script src="clientes.js"></script>
+<script src="imagenes.js?v=20261023a"></script>
+<script src="carta.js?v=20261023a"></script>
+<script src="clientes.js?v=20261023a"></script>
 <script>
 document.querySelectorAll('[data-img]').forEach(i=>i.src=IMG[i.dataset.img]);
 document.body.classList.add('modo-tienda');
